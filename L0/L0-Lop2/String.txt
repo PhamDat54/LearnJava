@@ -1,0 +1,70 @@
+* String(chuỗi) là một đối tượng biểu diễn một chuỗi các giá trị "char".
+
+1. Lớp String trong Java.
+       - Lớp String trong java cung cấp rất nhiều các phương thức để thức hiện các thao tác với chuỗi:
+           compare(), concat(), equals(), split(), length(), replace(), compareTo(), intern(), substring(),...
+       - Lớp java.lang.String được implements(thực thi) từ các interface Serializable, Comparable and CharSequence.
+
+2. CharSequence Interface
+       - CharSequence Interface dùng biểu diễn chuỗi ký tự. Nó được cài đặt bởi các lớp String, StringBuffer và StringBuider.
+           Điều này có nghĩa là chúng ta có thể tạo chuỗi ký tự trong java bằng cách sử dụng 3 lớp này.
+
+       * String là bất biến (immutable). Nghĩa là khi nào bạn thay đổi giá trị của bất kỳ chuỗi nào thì 1 instance
+       mới được tạo ra. Đối với chuỗi có thể thay đổi có thể dùng StringBuffer và StringBuilder
+
+3.String trong "java" là gì?
+    - Thông thường, string là 1 chuỗi các ký tự. Nhưng trong java, String là 1 đối tượng biểu diễn một nối tiếp của
+        các ký tự. Lớp "java.lang.String" được sử dụng để tạo đối tượng string.
+    - Có 2 các để tạo đối tượng string:
+        + sử dụng string literal
+        + sử dụng từ khoá "new"
+
+4. Sử dụng String Literal
+    - String literal được tạo ra bằng cách sử dụng 2 dấu nháy kép ("").
+        VD:
+            String s = "welcome";
+    - Khi khởi tạo 1 biến string literal, đầu tiên JVM sẽ kiểm tra xem giá trị đó đã tồn tại trong Pool chưa.
+    Nếu đã tồn tại trong Pool, thì giá trị của biến sẽ được tham ciếu đến instance đã được tạo ra. Nếu chuỗi không
+    tồn tại thì 1 instance mới sẽ được tạo.
+        VD:
+            String s1 = "welcome";
+            String s2 = "welcome"; // se khong tao instance moi
+    * java sử dụng string literal để làm cho Java sử dụng bộ nhớ hiệu quả hơn( Vì nếu chuỗi đã tồn tại trong Pool
+        thì sẽ không có đối tượng mới được tạo ra).
+
+5. Sử dụng từ khoá "new".
+        String s=new String("Welcome"); // Tạo 2 đối tượng và 1 biến tham chiếu
+    - Khí sử dụng "new" khai báo sẽ tạo ra một đối tượng mới trong HEAP và một đối tượng chuỗi trong Pool.
+      Biến s sẽ được tham chiếu tới đối tượng được tạo ra trong HEAP.
+
+6. Các phương thức của lớp String trong Java
+    - char charAt(int index): Tra về giá trị char co chỉ số cụ thể.
+    - int length(): Trả về độ dài chuỗi.
+    - static String format(String format, Object...args): Trả về chuỗi được format.
+    - static String format(Locale I, String format, Object...arg) : Trả về chuỗi đươc format theo vùng miền(quốc gia)
+    - String substring(int beginIndex): Trả về chuỗi con bắt đầu từ chỉ số Index.
+    - String substring(int beginIndex, int endIndex): Trả về chuỗi con từ chỉ số bắt đầu đến kết thúc.
+        .........
+
+7. StringBuffer trong Java
+       - Được sử dụng để tạo chuỗi có thể thay đổi(mutable). StringBuffer tương tự như String ngoại trừ nó
+         có thể thay đổi.
+       * Lớp StringBuffer là luồng an toàn, không thể truy cập nhiều luồng trong cùng 1 thời điểm.
+
+8. Các hàm Constructor quan trọng của StringBuffer
+       - StringBuffer(): tạo ra bộ đệm chuỗi với dung lượng ban đầu là 16.
+       - StringBuffer(String str): tạo 1 bộ đệm chuỗi với 1 chuỗi cụ thể.
+       - StringBuffer(in câpcity): tạo 1 bộ đệm chuỗi với dung lượng được chỉ định như độ dài chuỗi.
+
+9. StringBuilder trong Java
+    - Được sử dụng để tạo chuỗi có thể thay đổi(mutable). StringBuilder tương tự như StringBuffer ngoại trừ nó
+      không đồng bộ(non-synchoronized).
+
+10. Hàm Constructor quan trọng của StringBuilder
+    - StringBuilder(): tạo 1 Builder chuỗi với dung lượng ban đâu: 16.
+    - StringBuilder(String str): tạo 1 Builder chuỗi với chuỗi cụ thể.
+    - StringBuilder(int capacity): tạo 1 Builder chuỗi với dung lượng được chỉ định như độ dài chuỗi.
+
+
+
+

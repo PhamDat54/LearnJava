@@ -1,0 +1,29 @@
+* Có hai loại Access Modifier trong Java là: Access Modifier và Non-access Modifier
+* Access Modifier trong Java xác định phạm vi có thể truy cập của biến, phương thức(method), constructor hoặc lớp.
+    - Trong java có 4 phạm vi truy cập của Access Modifier
+        + private
+        + default
+        + protected
+        + public
+    Ngoài ra, còn có nhiều Non-access Modifier như: static, abstract, synchronized, native, volatile, tránient,..
+
+1. Tổng quan về Access Modifier
+    Access Modifier     Trong lớp   Trong package   Ngoài package bởi lớp con   Ngoài package
+    Private             Y           N               N                           N
+    Defaul              Y           Y               N                           N
+    Protected           Y           Y               Y                           N
+    Public              Y           Y               Y                           Y
+
+2 Phạm vi truy cập của Private
+    - Private Access Modifier chỉ được truy cập trong phạm vi class.
+    - Nếu tạo bất kỳ constructor(hàm) là private(riêng tư) trong, bạn sẽ thể tạo instance của class bên ngoài nó.
+    *Chú ý: Một lớp không thể là private hoặc protected, ngoại trừ lớp lồng nhau.
+
+3. Phạm vi truy cập của default
+    - Nếu bạn không khai báo modifier nào thì nó chính là trượng hợp mặc định. Default Access Modifier là được phép
+        truy cập trong cùng package.
+4. Phạm vi truy cập protected
+    - Protected access modifier được truy cập bên trong package và bên ngoài package nhưng phải kế thừa.
+    - Protected access modifier có thể được áp dụng cho biến, phương thức(method), constructor. Nó không thể áp dụng cho class
+5. Phạm vi truy cập của public
+    - Public access modifier được truy cập ở mọi nơivarriable

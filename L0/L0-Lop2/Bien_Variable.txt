@@ -1,0 +1,79 @@
+Quy tắc đặt biến trong Java
+    - Chỉ được bắt đầu bằn một ký tự(chữ), hoặc một dấu gạch dưới(_), hoặc một kí tự dollar($).
+    - Tên biến không được chứa khoảng trắng.
+    - Bắt đầu từ ký tự thứ hai, có thể dùng ký tự(chữ), dấu gạch dưới(_), hoặc ký tự dollar($).
+    - Không được trùng với các từ khoá.
+    - Có phân biệt chữ hoa và chữ thường.
+
+Biến là một liên kết tới một vị trí trên bộ nhớ (memory) để chứa dữ liệu.
+Có 3 kiểu biến trong Java là: biến local(cục bộ), biến instance(toàn cục) và biến static(lưỡng tính)
+
+1. Biến local (biến cục bộ)
+    - Biến local được khai báo trong các phương thức, hàm contructor hoặc trong các block.
+    - Biến local được tạo bên trong các phương thức, contructor, block và sẽ bị phá huỷ khi kết thúc.
+    - Không được sử dụng "access modifier" khi khai báo biến local.
+    - Các biến local được lưu trên vùng nhớ stack của bộ nhớ.
+    - Bạn cần khởi tạo giá trị mặc định cho biến local trước khi có thể sử dụng.
+    CÚ PHÁP:
+        Kiểu_dữ_liệu Tên_biến = Giá_trị;
+        DataType varName = Value;
+        Ví dụ: int n = 10;                     // Đây là biến local
+2. Biến instance( biến toàn cục)
+    - Biến instance được khai báo trong 1 lớp(class), bên ngoài các phương thức, constructor
+      và các block.
+    - Biến instance được lưu trong bộ nhớ heap.
+    - Biến instance được tạo khi một đối tượng được tạo bằng việc sử dụng từ khoá "new"
+      và sẽ bị phá huỷ khi đối tượng bị phá huỷ.
+    - Biến instance có thể được sử dụng bởi các phương thức, constructor, block,...
+      Nhưng nó phải được thông qua một đối tượng cụ thể.
+    - Bạn được phép sử dụng "access modifier" khi khai báo biến instance, mặc định là "default".
+    - Biến instance có giá trị mặc định phụ thuộc vào kiểu dữ liệu của nó. VD nếu là kiểu int,
+      short, byte thì giá trị mặc định là 0, kiểu double thì là 0.0d,... Vì vậy, bạn sẽ không
+      cần khởi tạo giá trị cho biến instance trước.
+    - Bên trong class mà bạn khai báo biến instance, bạn có thể gói nó trực tiếp bằng tên
+      khi sử dụng ở khắp nơi bên trong class đó.
+    VD:
+        public class Sinhvien {
+            // biến instance "ten" kiểu String, có giá trị mặc định là null
+            public String ten;
+
+            // biến instance "tuoi" kiểu Integer, có giá trị mặc định là 0
+            private int tuoi;
+
+            // sử dụng biến ten trong một constructor
+            public Sinhvien(String ten) {
+                this.ten = ten;
+            }
+
+            // sử dụng biến tuoi trong phương thức setTuoi
+            public void setTuoi(int tuoi) {
+                this.tuoi = tuoi;
+            }
+            }
+3. Biến static(Biến lưỡng tính)
+    - Biến static được khai báo trong một class với từ khoá "static", phía bên ngoài
+      các phương thức, constructor và block.
+    - Sẽ chỉ có duy nhất một sao của các biến static được tạo ra, dù bạn tạo bao nhiêu đối tượng
+      từ lớp tương ứng.
+    - Biến static được lưu trữ trong bộ nhớ static riêng.
+    - Biến static được tạo khi chương trình bắt đầu chạy và chỉ bị phá huỷ khi chương trình dừng.
+    - Giá trị mặc định của biến static phụ thuộc và kiểu dữ liệu bạn khai báo tương tự biến instance
+    - Biến static được truy cập thông qua tên của class chứa nó, với cú pháp: TenClass.tenBien
+    - Trong class, các phương thức sử dụng biến static bằng cách gọi tên của nó khi phương thức đó
+      cũng được khai báo với từ khoá "static".
+    VD:
+        public class Sinhvien {
+            // biến static 'ten'
+            public static String ten = "Nguyen Van A";
+
+            // biến static 'tuoi'
+            public static int tuoi = 21;
+
+            public static void main(String args[]) {
+                // Sử dụng biến static bằng cách gọi trực tiếp
+                System.out.println("Ten : " + Sinhvien.ten);
+
+                // Sử dụng biến static bằng cách gọi thông qua tên class
+                System.out.println("Ten : " + Sinhvien.tuoi);
+            }
+        }

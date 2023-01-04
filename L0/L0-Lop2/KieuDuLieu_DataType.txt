@@ -1,0 +1,18 @@
+* Trong Java, các kiểu dữ liệu được chia thành 2 loại:
+    - Các kiểu dữ liệu nguyên thuỷ
+    - Các kiểu dữ liệu đối tượng
+
+1. Kiểu dữ liệu nguyên thuỷ
+    - Byte: kiểu số nguyên có kích thước 1 byte(8 bít). Phạm vị giá trị từ -128 đến 127. Giá trị mặc định là 0
+    - Char: kiểu kí tự hoặc số nguyên không âm có kích thước 2 byte (16 bít). Phạm vi biểu diễn giá trị từ 0 -> u\ffff. giá trị mặc định: 0.
+    - Boolean: chỉ có 2 trạng thái đúng hoặc sai (độ lớn 1 bít). Giá trị biểu diễn "True" or "False". Mặc định False.
+    - Short: dữ liệu kiểu số nguyên, kích cỡ 2 byte (16 bít). Phạm vị giá trị từ -32.768 đến 32.767. Giá trị mặc định: 0.
+    - Int: kiểu dữ liệu số nguyên, kích cỡ 4 byte (32 bít). Phạm vị giá trị -2.147.483.648 đến 2.147.483.647. Value mặc định: 0
+    - Long: dữ liệu kiểu số nguyên, cỡ 8 byte. Value mặc định 0L.
+    - Float: dữ liệu kiểu số thực, cỡ 4 byte(32 bít). Value mặc định: 0.0F.
+    - Double: dự liệu kiểu số thực, cỡ 8 byte. Giá trị mặc định là 0.00D.
+
+2. Kiểu dữ liệu đối tượng.
+    - Array: Một mảng của các dữ liệu cùng kiểu.
+    - Class: Dữ liệu kiểu lớp đối tượng do người dùng định nghĩa. Chứa thuộc tính và phương thức.
+    - Interface: Dữ liệu kiểu lớp giao tiếp do người dùng định nghĩa, chứa các phương thức giao tiếp.
