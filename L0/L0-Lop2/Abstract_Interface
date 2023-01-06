@@ -1,0 +1,67 @@
+1. Interface
+(*) Interface là gì?
+    - Là 1 bản thiết kế của một class, không phải là 1 class.
+    - Nó chỉ có các phương thức trừu tượng, một tập hợp các phương thức trừu tượng(Abstract). Một class khi triển
+     khai (implement) một interface sẽ kế thừa các phương thức của interface.
+    - Nó là 1 kỹ thuật có tính trừu tượng hoàn toàn và đa kế thừa trong Java. Nó không thể được khỏi tạo giống như
+        một class trừu tượng.
+
+    - Viết 1 interface giống như 1 class nhưng chúng có định nghĩa khác nhau. Trừ khi 1 class triển khai interface
+    là lớp trừu tượng abstract, còn lại tất cả các phương thức của interface cần được định nghĩa.
+
+    - Các trường của Interface là public, static và final theo mặc định và các pương thức là public và abstract.
+
+    ** Java Compiler thêm từ khoá public và abstract trước phương thức của interface và các từ khoá public, static và
+        final trước các thành viên dữ liệu.
+
+(*)Interface kế thừa interface
+    - Một Interface cũng có thể kế thừa từ các Interface khác.
+
+(*)Đa kế thừa bởi Interface
+    - Nếu 1 class triển khai (implements) nhiều interface, hoặc một interface kế thừa từ nhiều interface khác thì
+        đó là đa kế thừa.
+
+(*)Interface lông nhau
+    - Khi 1 interface có chứa 1 interface khác bên trong thì đó là interface lồng.
+
+2. Abstract class
+(*) Khái niệm abstract.
+    - Abstract class được khai báo với từ khoá abstract, có nghĩa là lớp trừu tượng. Nó có thể có các phương thức
+        abstract(trừu tượng) hoặc non-abstract(không trừu tượng).
+    - Nó là class đại diện cho 1 khái niếm và không thể tạo đối tượng của nó. Một class có chứa ít nhất 1 phương
+        thức trừu tượng(method k có bất kỳ phần thực thi hoặc thân nào) được gọi là lớp trừu tượng.
+    - Luôn có một phương thức khởi tạo mặc định trong một lớp trừu tượng, nó cũng có thể có một phương thức khởi
+        tạo tham số hoá.
+    - Một lớp kế thừa từ lớp trừu tượng(sub class-lớp con) không cần phải implement non-abstract methods, nhưng
+        những method nào có abstract thì bắt buộc phải override. Trừ khi subclass cũng là abstract.
+(*) Kế thừa của Abstract class
+    - Ta không thể tạo ra các đối tượng hoặc thể hiện từ các abstract class, nhưng chúng thể được phân lớp. Nghĩa
+        là để truy cấp các phương thức bên trong các lớp trừu tượng, chúng ta phải thực hiện kế thừa chúng.
+
+(*)Ghi đè các lớp trừu tượng trong Java
+    - Bắt buộc phải ghi đè các phương thức trừu tượng của lớp cha trong lớp con của nó vì lớp dẫn xuất mở rộng các
+        phương thức trừu tượng của lớp cơ sở.
+    - Nếu không ghi đè các phương thức trừu tượng trong các lớp con thì sẽ xảy ra lỗi biên dịch -> lớp con cần ghi
+        đè các phương thức trừu tượng của lớp cơ sở của nó.
+(*)Các phương thức của lớp trừu tượng (methods class)
+    -Các phương thức trừu tượng là các method không có triển khai, chngs không chứa bất kỳ câu lênh phương thức nào
+    - các class con của abstract class phải cung cấp việc triển khai các phương thức kế thừa này..
+    - Một phương thức trừu tượng phải khai báo với một từ khoá trừu tượng.
+    - Khai báo 1 phương thức trừu tượng phải kết thúc bằng dấu chấm phẩy(;)
+
+(*) Truy cập hàm tạo
+    - VÌ các hàm tạo của các class không trừu tượng có thể truy cập, ta cũng có thể truy cập vào hàm tạo của 1 lớp
+    trừu tượng
+    - Để truy cập hàm tạo của lớp cha, chúng ta dùng super() bên trong hầm tạo của lớp con
+
+** Không thể khởi tạo 1 đối tượng abstract class vì các lớp không hoàn chỉnh, không có triển khai. Các abstract
+    class không có thân phương thức.
+
+   + Có thể khai báo 1 abstract class bằng cách sử dụng từ khoá abstract
+   + Có thể có các method trừu tượng hoặc không.
+   + Một lớp trừu tượng có thể có các phương thức tĩnh.
+   + Một lớp trừu tượng cũng có thể có hàm tạo.
+   + Không thể khởi tạo hoặc tạo 1 đối tượng (Obj) của 1 lớp trừu tượng.
+   + Một lớp dẫn xuất từ lớp cha trừu tượng phải triển khai mỗi phương thức được khái báo là trừu tượng cha-> lỗi biên dịch
+   + Nếu lớp dẫn xuất không triển khai tất cả phương thức trừu tượng của lớp cha thì lớp dẫn xuất cũng phải khai
+        báo chính nó là lớp trừu tượng.

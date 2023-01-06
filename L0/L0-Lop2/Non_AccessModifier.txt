@@ -1,4 +1,4 @@
-* Non-Access Modifier thay đổi thuộc tính clas và các biến, phương thức của class đó.
+* Non-Access Modifier thay đổi thuộc tính class và các biến, phương thức của class đó.
 * Trong Java chúng ta có những non-access modifier sau:
     - abstract
     - static: Static Modifier trong Java được sử dụng để tạo các phương thức class và biến class

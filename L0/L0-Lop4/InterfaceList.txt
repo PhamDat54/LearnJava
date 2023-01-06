@@ -1,0 +1,77 @@
+1. List trong Java
+    - List là một interface trong java, chứa các phương thức để chèn và xoá có phần tử theo chỉ số index
+    *Khai báo:
+                public interface List<E> extends Collection<E>
+
+2. Các phương thức trong List
+    - void add(int index, Object element): Chèn cac phần tử vào list tại chỉ số index.
+
+    - boolean addAll(int index,Collection c): Chèn tất cả các yếu tố của c vào danh sách tại chỉ số.
+
+    - object get(int index): Trả về đối tượng được lữu trữ tại chỉ số index trong list.
+
+    - object set(int index,Object element): gán phần tử cho vị trí được chỉ định trong Index trong list.
+
+    - object remove(int index): xoá các phần tử tại chỉ số index và trả về phần tử đã xoá
+
+    - ListIterator listIterator(): trả về một Iterator mà bắt đầu từ phần từ đầu tiên của list.
+
+    - ListIterator listIterator(int index): Trả về một Iterator mà phần tử bắt đầu từ chỉ số index chỉ định.
+
+3. Phân cấp các lớp thi hành của List
+
+                          AbstractList
+                                |
+                      -----------------------------------------------------------------------------
+                      |                                                |                          |
+                   ArrayList                                 AbstractSequebtialList               Vector
+                      |                                                |                          |
+     ---------------------------------------                           |                          |
+     |                |                    |                           |                          |
+AttributeList      RoleList         RoleUnresolvedList             LinkedList                   Stack
+
+4. ArrayList
+    - là một lớp kế thừa AbstractList và triển khỉa của List Interface trong Collection, khá tương đồng với "list".
+    * Một số đặc điểm của ArrayList
+        + Có thể chứa các phần tử trùng lặp.
+        + Duy trì thứ tự của phần tử được thêm vào.
+        + Không đồng bộ (synchronized).
+        + Cho phép truy cập ngẫu nhiên vì nó lưu dữ liệu theo chỉ mục.
+        + Thao tác chậm vì cần nhiều sự dịch chuyển nếu bất kỳ phần tử nào bị xoá khỏi danh sách
+    * Hệ thống cấp bậc của lớp ArrayList
+
+    Interface            Iterable
+                            |    ------> Extends
+    Interface            Colection
+                            |    ------> Extends
+    Interface              List
+                            |    ------> Implement
+    Class                ArrayList
+
+    * Khởi tạo ArrayList
+        - Có 2 kiểu khởi tạo ArrayList là non-generic và generic
+            + Array list = new ArrayList();                     //non-generic
+            + ArrayLis<String> list = new ArrayList<String>();  //generic
+         ** Collection trong java là non-generic trước JDK1.5 sau JDK 1.5 là generic.
+
+    * Thêm phần tử trong ArrayLis
+        -Java cung cấp cho chúng ta phương thức set(index, element), trong đó index là chỉ số của phần tử cần cập
+         nhật và element là phần tử mới để thay thế.
+        **VD:
+            import java.util.ArrayList;
+            public class ThemArrayList1 {
+                public static void main(String[] args) {
+                    //khai báo 1 Array list có tên là list, kiểu string
+                    ArrayList<String> BangChuCai = new ArrayList<String>();
+                    //thêm các phần từ vào BangChuCai/
+                    BangChuCai.add("A");
+                    BangChuCai.add("B");
+                    BangChuCai.add("C");
+                    BangChuCai.add("D");
+
+                    System.out.println("BangChuCai truoc khi cap nhat" + BangChuCai);
+                    // cập nhật giá trị cho phần tử có chỉ số 3
+                    BangChuCai.set(3, "E");
+                    System.out.println("BangChuCai sau cập nhật" + BangChuCai);
+                }
+            }

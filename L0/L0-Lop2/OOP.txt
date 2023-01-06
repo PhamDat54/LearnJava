@@ -1,0 +1,54 @@
+1. OOP(Lập trình hướng đối tượng) là gì?
+    - Là một phương pháp lập trình dựa trên các khái niệm về lớp và đối tượng. Thường tập trung vào các đối tượng
+        thao tác hơn là logic để có thể thao tác chúng.
+    - Đối tượng là những sự vật, sự việc mà nó có những tính chất, đặc tính, hành động giống nhau và ta gom lại
+        thành đối tượng giống trong thực tế cuộc sống.
+    - Khi lập trình OOP, ta sẽ định nghĩa các lớp (class) để góm các đối tượng thực tế.
+
+(*) Về đối tượng (Object)
+    - Mỗi một đối tượng sẽ bao gồm 2 thông tin là phương thức và thuộc tính:
+        + Thuộc tính: là các thông tin, đặc điểm của đối tượng mà lập trình viên hướng tới.
+        + Phương thức: Chính là các, hành động mà đối tượng lập trình có thể thực hiện được.
+
+(*) Về lớp (Class)
+    - Mỗi lớp(class) là một kiểu dữ liệu và nó bao gồm nhiều thuộc tính và phương thức đã được định nghĩa từ trước.
+        Hoàn toàn khác với các kiểu dữ liệu thông thường, mỗi lớp là đơn vị bao gầm các sự kết hợp giữa phương thức
+        cũng như thuộc tính. Đây được xem là sự trừu tượng hoá của rất nhiều đối tượng.
+
+(*) Sự khác biệt giữa lớp và đối tượng
+    - Class tượng tự như khuôn mẫu, còn đối tượng là thực thể thể hiện dựa vào khuôn mẫu đó.
+
+2. Các nguyên lý cơ bản của OOP
+(*) Tính đóng gói (Encapsulation)
+    - Các dữ liệu và phương thức có liên quan với nhau đóng gói thành các lớp(class) để tiện sử dụng và quản lí.
+        Tức là mỗi lớp được xây dựng để thực hiên 1 nhóm chức năng đặc trưng của riêng lớp đó.
+    - Các thuộc tính và phương thức của đối tượng cần cho việc giải quyết bài toán được chọn ra sẽ được đóng gói
+        vào mmotj kiểu dữ liệu gọi là class.
+    - Đóng gói còn để che giấu một số thông tin và chi tiết cài đặt nội bộ để bên ngoài không thể nhìn thấy.
+    - Nhằm che dấu thông tin khỏi các đối tượng bên ngoài, thuộc tính nào thì phương thức nấy. Tức là code bên
+        ngoài không trực tiếp nhìn thấy và thay đổi trạng thái của đối tướng đó.
+    *Trang thái đối tượng không hợp lệ thường do: chưa được kiểm định tính hợp lệ, các bước thực hiện không đúng
+        trình tự hoặc bị bỏ qua -> Quy tắc trong OOP: luôn phải khai báo các trạng thái bên trong của đối tượng là
+        private và chỉ cho truy cập qua các public/protected method/property.
+
+(*) Tính kế thừa (Inherrtance)
+    - Cho phép xây dụng 1 class mới dựa trên các định nghĩa của lớp đã có, nghĩa là class cha có thể chia sẻ dữ liệu
+        và phương thức cho lớp con, các lớp con không phải định nghĩa lại.
+    - Ngoài ra có thể mở rộng các thành phần kế thừa và bổ sung thêm các thành phần mới, tái sử dụng mã nguồn 1
+        cách tối ưu, tận dụng được mã nguồn.
+    - Một số loại kế thừa thường gặp: đơn kế thừa, đa kế thừa, kế thừa đa cấp kế thừa thứ bậc.
+    * Khi bắt đầu xây dựng chúng ta sẽ bắt đầu thiết kế định nghĩa các lớp. Thông thường một số lớp có quan hệ với
+        những lớp khác, chúng có những đặc tính giống nhau.
+
+(*) Tính đa hình (Polymorphism)
+    - Là một hành động có thể được thực hiện bằng nhiều cách khác nhau. Đây là một tính chất có thể nói là chứa
+        đựng hầu hết sức mạnh của OOp
+    - Đơn giản mà nói nó là khái niệm mà hai hoặc nhiều lớp có những phương thức giống nhau nhưng có thể thực thi
+        theo những cách thức khác nhau.
+
+(*) Tính trừu tượng (Abstraction)
+    - Trừu tượng có nghĩa là tổng quát một cái gì đó lên, không cần chú ý chi tiết bên trong.
+    - Ở trong lập trình OOP, tính trừu tượng nghĩa là chọn ra các thuộc tính, phương thức của đối tượng cần cho việc
+        giải quyết bài toán đang lập trình. Vì một đối tượng có nhiều thuộc tính phương thức, nhưng với bào toán cụ thể.
+
+

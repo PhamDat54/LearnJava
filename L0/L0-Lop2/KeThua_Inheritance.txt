@@ -1,0 +1,21 @@
+1. Kế thừa (inheritance)
+    - Là phát triển lớp mới dựa trên các lớp đã có. Xây dựng các lớp mới có sẵn các đặc tính của lớp cũ, đồng thời
+        lớp mới có thể mở rộng các đặc tính của nó.
+    - Lớp kế thừa gọi là lớp con(child, subclass), lớp dẫn xuất(derived class). Lớp được kế thừa là lớp cha(parent,
+        superclass), lớp cơ sở(baseclass).
+    - Mối quan hệ kế thừa: Lớp con là 1 loại(is-a-kind-of) của lớp cha, kế thừ các thành phần dữ liệu và các hành vị
+        của lớp cha. Có thể khai báo thêm thuộc tính, phương thức cho phù hợp với mục đích sử dụng.
+   * Lớp con có thể kế thừa các thành viên được khai báo là Public, protected và default(mặc định) của lớp cha. Không
+        kế thừa được các thành viên private.
+
+3. Các loại kế thừa
+    * Đơn kế thừa (single inheritance):
+        - kế thừa từ 1 lớp
+    * Kế thừa nhiều cấp (multilevel inheritance):
+        - 1 lớp con kế thừa từ 1 lớp cha. Lớp cha đó lại kế thừa từ 1 lớp khác
+    * Kế thừa phân cấp (hierarchical inheritance)
+        - Nhiều lớp con kế thừa từ 1 lớp cha. Các lớp con có cùng lớp cha gọi là lớp anh chị em (siblings)
+    * Đa kế thừa (multiple inheritance)
+        - Java không hỗ trợ đa kế thừa, tức là 1 lớp con kế thừa từ nhiều lớp cha.
+        - Đa kế thừa trong java có thể thực hiện bằng các sử dụng "interface", chứ không đa kế thừa từ lớp(clas)
+

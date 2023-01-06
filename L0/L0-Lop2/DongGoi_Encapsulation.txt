@@ -1,0 +1,21 @@
+1. Tính đóng gói trong java
+    -Tính đóng gói là việc đóng gói các thuộc tính và phương thức bên trong class. Tức là thiết kế để các thuộc tính
+        và phương thức thuộc về (bên trong) 1 class.
+    - Với các access modifier, tính đóng gói sẽ có thể giúp ngăn chăn những lớp bên ngoài truy cập, thay đổi thuộc
+        tính và phương thưc của 1 class -> che giấu dữ liệu (data hiding).
+
+2. Tại sao sử dụng?
+    - Vì nó giúp đóng gói các thuộc tính và phương thức liên quan với nhau trong 1 class.
+    - Nó cũng giúp chúng ta thay đổi giá trị của các thuộc tính thông qua phương thức -> code dễ độc và rõ ràng.
+
+3. Cơ chế che giấu dữ liệu (data hiding)
+    - Data hiding là cách hạn chế quyền truy cập các thuộc tính dữ liệu của các lớp bằng cách hạn chế phạm vị truy
+        cập của chúng với các access modifier.
+    - Với chỉ định truy cập là private thì các thuộc tính dữ liệu chỉ có thể truy các phương thức bên trong lớp.
+        Các đối tượng khác muốn truy cập vào dữ liệu riêng tư này phải thông qua các phương thức public.
+    - Phương thức getter/setter có phạm vi truy cập là public để truy cập và sửa đổi các giá trị của thuộc tính trong lớp.
+        + getter là phương thức truy cập vào các thuộc tính của Obj trả về các thuộc tính của Obj
+        + setter là phương thức truy cập vào thuộc tính của đối tượng và gán giá trị cho các thuộc tính của Obj đó.
+
+
+

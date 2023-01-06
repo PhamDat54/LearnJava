@@ -1,0 +1,32 @@
+1. Collection là gì?
+    -Collection là một root interface trong hệ thống cấp bậc Collection.
+2. Thành phần
+    -Java Collection cung cấp nhiều interface (Set, List, Queue, Deque) và các lớp (ArrayList, Vecto, Lịnkedlist,
+        PriorityQueue, HashSet, LinkedHash, TreeSet vv)
+3. Hệ thống cấp bậc Collection.
+    - Các lớp và interface của Collection được chứa tất cả trong gói "java.util"
+
+                Collection
+                    |
+    ---------------------------------
+    |               |               |
+   Set            List            Queue          Map
+    |                               |             |
+ SortedSet                        Deque       SortedMap
+
+    - Set: là một collection không thể chứa 2 giá trị trùng lặp. Được sử dụng biểu diễn các tập hợp toán học trừu tượng
+    - List: là 1 collection có thứ tự, có thể chứa các thành phần trùng lặp. Thường có quyền kiểm soát chính xác vị
+            trí các phần tử chèn vào và có thể truy cập bằng chỉ số.
+    - Queue(hàng đợi): là một collection được sử dụng để chứa nhiều phần tử trước khi xử lý. Bên cạnh các thao tác
+        cở bản của collection, Queue cung cấp các thao tác bổ sung như chen, lấy ra và kiểm tra
+    - Deque: là một collection được sử dụng để chứa nhiều phần tử trước khi xử lý. Thao tác cơ bản giống như Queue nhưng
+            tất các các phần tử có thể được chèn vào, lấy ra cả hai đầu.
+    - Map: là một đối tượng ánh xạ mỗi key tương ướng với một giá trị. Không thể chứa giá trị trùng lặp, Mỗi key có
+            có thể ánh xạ đến nhiều nhất một giá trị.
+
+*Iterable là 1 biễu diễn đơn giản của một loạt các phần tử có thể được lặp lại. Nó không có bất kì trạng thái lặp
+    như "phần tử hiện tại". Thay vào đó, nó có một phương thức tạo ra "Iterator".
+
+* Iterator là đối tượng các trạng thái lặp, cho phép bạn kiểm ta xem nó có nhiều phần tử hơn bằng các sử dụng
+        hasNext() hay không và chuyển sang phần tử tiếp theo (nếu có) bằng cách sử dụng next().
+

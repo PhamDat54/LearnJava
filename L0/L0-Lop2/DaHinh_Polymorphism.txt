@@ -1,0 +1,44 @@
+1. Tính đa hình (Polymorphism) trong Java
+    - Tính đa hình (Polymorphism) được hiểu là các Obj, methods giống nhau có thể có các hành vi khác nhau tuỳ vào
+        tùng tình huống khác nhau.
+
+2. Tại sao lại sử dụng tính đa hình
+    - Trong java nó cho phép chúng ta tạo ra những mã code nhất quán
+
+3. Chuyển đổi kiểu dữ liệu đối tượng
+    - Kiểu dữ liệu tham chiếu (các lớp) có thể được chuyển đổi kiểu khi kiểu dữ liệu tham chiếu (lớp) tương thích,
+        tức là nằm trên cung một cây phân cấp kế thừa.
+    - Có hai cách chuyển đổi là Up-casting và Down-casting
+    *Up-casting
+        - Đi lên trên trong phân cấp thừa kế. Up-casting là khả năng nhìn nhận đối tượng thuộc lớp dẫn xuất như là
+            một đối tượng thuộc lớp cơ sở.
+        - Tự động chuyển đổi kiểu.
+    *Down-casting
+        - Đi xuống trong cây phân cấp thừa kế. Down-castinh là khả năng nhin nhận một đối tượng thuộc lớp cơ sở như
+            một đối tượng thuộc lớp dẫn xuất.
+        - Không tự động chuyển đổi kiểu, phải ép kiểu
+
+4. Hoạt động của tính đa hình
+* Trong Java ta có thể đạt được tính đa hình (Polymorphism) với nạp chồng phương thức (method overloading) và ghi
+    đè phương thức ( method overriding). Không hỗ trợ nạp chồng toán tử (operator overloading)
+
+**Overloading - Nạp chồng phương thức
+    - Trong Java, overloading được định nghĩa là nạp chồng phương thức, có nghĩa là trong một lớp có nhiều phương
+        thức cùng tên nhưng:
+            + Khác nhau về số đối truyền vào và các đối số có cùng kiểu dữ liệu.
+            + Có cùng đối số truyền vào và các đối số không có cùng kiểu dữ liệu.
+            + Khác nhau trình tự kiểu dữ liệu của các đối số.
+    - Có 3 cách để thực hiện nạp chồng phương thức là
+            + thay đổi số truyền vào
+            + thay đổi kiểu dữ liệu của các đối số
+            + thay đổi trình tự của các đối số đó.
+**Overriding - Ghi đè phương thức
+    - Overriding được định nghĩa  là ghi đè phương thức, nghĩa là khi lớp con kế thừa trực tiếp từ 1 lớp cha thì
+        lớp con đó có thể định nghĩa lại một phương thức đã có trong lớp cha cho phù hợp với mục đích sử dụng.
+    - Quy tắc:
+        + Danh sách các đối số phải giống với phương thức ghi đè.
+        + Kiểu trả về phải giống với kiểu trả về được khai báo trong phương thức được gi đè của lớp c.
+        + Mức độ truy cập của phương thức "Overriding" ở lớp con không được nhỏ hơn phương thức đó trong lớp cha.
+        + Một phương thức được khai báo là final hoặc static thì không thể được ghi đè.
+        + Các hàm tạo của lớp cha không thể được ghi đè.
+        + Lớp con phải luôn luôn ghì đè phương thức abstract của lớp cha.
